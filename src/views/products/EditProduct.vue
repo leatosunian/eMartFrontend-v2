@@ -439,7 +439,6 @@
 
             if($event.target.files.length >= 1){
                 image = $event.target.files[0]
-                
             }
 
             if(image.size <= 2480000){
@@ -465,6 +464,7 @@
                   });
                   this.image = undefined
             }
+            console.log(image)
         },
         validate(){
           if(!this.product.name || !this.product.price || !this.product.image || !this.product.category || !this.product.str_variant || !this.product.subcategory){
@@ -480,7 +480,6 @@
         editProduct() {
             let data
             let content = ''
-            console.log(this.product.image)
             if(this.image != undefined){
                 content = 'multipart/form-data'
                 data = new FormData()
@@ -508,7 +507,6 @@
               }
               }).then((response) => {
                 const {data} = response
-                console.log(data);
                 this.$notify({
                   group: 'foo',
                   title: '',
