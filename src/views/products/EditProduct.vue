@@ -517,7 +517,7 @@
                 });
 
               }).catch( error => {
-                console.log(error.response.data.msg)
+                console.log(error)
                 this.msm_error = error.response.data.msg
                 return this.$notify({
                   group: 'foo',
