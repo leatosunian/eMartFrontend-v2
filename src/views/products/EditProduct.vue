@@ -480,7 +480,7 @@
         editProduct() {
             let data
             let content = ''
-
+            console.log(this.product.image)
             if(this.image != undefined){
                 content = 'multipart/form-data'
                 data = new FormData()
