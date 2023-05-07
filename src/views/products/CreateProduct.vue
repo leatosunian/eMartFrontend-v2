@@ -340,7 +340,7 @@
               this.$router.push({name: 'products'})
               }, 2200);
             }).catch( error => {
-              console.log(error.response.data.msg)
+              console.log(error)
               this.msm_error = error.response.data.msg
               this.$notify({
                 group: 'foo',
