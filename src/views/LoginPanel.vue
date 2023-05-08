@@ -5,61 +5,47 @@
           <img src="@/assets/emart0.png" class="" style="width:150px; " alt="...">
         </div> -->
         <div class="container">
-            
             <div class="row justify-content-center align-items-center" style="padding: 0 30px;">
                 <div class="my-5 col-12 col-md-5 col-xl-4">
-
                   <!-- Heading -->
                   <h1 class="mb-3 text-center display-4">
                     Iniciá Sesión
                   </h1>
-
                   <!-- Subheading -->
                   <p class="mb-5 text-center text-muted">
                     Accede a tu panel de administrador
                   </p>
-
                   <!-- Form -->
                   <form>
-
                     <!-- Email address -->
                     <div class="form-group"  style="display:flex; flex-direction:column ; align-items: flex-start">
-
                       <!-- Label -->
                       <label class="form-label">
                         Usuario
                       </label>
-
                       <!-- Input -->
                       <input type="text" v-model="name" class="form-control" placeholder="Ingresa tu usuario">
-
                     </div>
 
                     <!-- Password -->
                     <div class="form-group" style="display:flex; flex-direction:column ; align-items: flex-start"  >
                       <div class="row">
                         <div class="col">
-
                           <!-- Label -->
                           <label class="form-label">
                             Contraseña
                           </label>
-
                         </div>
-                        
                       </div> <!-- / .row -->
 
                       <!-- Input group -->
                       <div class="input-group input-group-merge">
-
                         <!-- Input -->
                         <input class="form-control" v-model="password" type="password" placeholder="Ingresá tu contraseña">
-
                         <!-- Icon -->
                         <span class="input-group-text">
                           <i class="fe fe-eye"></i>
                         </span>
-
                       </div>
                     </div>
 
@@ -83,14 +69,10 @@
                     <div v-if="msm_error" class="alert alert-warning" role="alert">
                       {{msm_error}}
                     </div>
-                    
-
+                
                   </form>
-
                 </div>
             </div> <!-- / .row -->
-
-           
         </div> <!-- / .container -->
     </div>
 </template>
