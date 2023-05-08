@@ -1,9 +1,9 @@
 <template>
-    <div class="d-flex align-items-center bg-auth border-top border-top-2 border-primary" style="height: 100vh !important ; display: flex !important;
+    <div class="d-flex align-items-center bg-auth border-top border-top-2 border-primary" style="height: 100vh !important ; display: flex !important; justify-content:center;
     flex-direction: column !important;">
-        <div class="" style="width:100%; display:flex; justify-content:center; margin-top:20px; margin-bottom:150px;">
-          <img src="@/assets/emart0.png" class="" style="width:130px; " alt="...">
-        </div>
+        <!-- <div class="" style="width:100%; display:flex; justify-content:center;">
+          <img src="@/assets/emart0.png" class="" style="width:150px; " alt="...">
+        </div> -->
         <div class="container">
             
             <div class="row justify-content-center align-items-center" style="padding: 0 30px;">

@@ -416,10 +416,6 @@ export default {
                 if(data.clientPurchases){
                     this.orders = data.clientPurchases
                 }
-                console.log(this.clientDat);
-                console.log(this.orders);
-                console.log(this.addresses);
-
                 let totalEarnings = 0
                 let datos = this.orders.map((sale) => {
                     const saleData = Object.entries(sale)
@@ -428,8 +424,6 @@ export default {
                     totalEarnings = totalEarnings + total                  
                 })
                 this.earnings = totalEarnings
-                console.log(this.earnings);
-
             });
         },
     }

@@ -209,7 +209,7 @@ export default {
                 this.isData = true
                 this.str_image = this.$url+'/getImage/'+this.product.image
             }).catch( error => {
-                console.log(error.response.data.msg)
+                console.log(error.response.data)
                 this.isData = false
                 this.msm_error = error.response.data.msg
             })
@@ -299,7 +299,7 @@ export default {
                     $('#input_file').val('')
                     this.getGallery()
                 }).catch( error => {
-                    console.log(error.response.data.msg)
+                    console.log(error)
                     this.msm_error = error.response.data.msg
                     this.$notify({
                         group: 'foo',
@@ -341,7 +341,7 @@ export default {
             }
             
         }).catch( error => {
-            console.log(error.response.data.msg)
+            console.log(error)
             this.msm_error = error.response.data.msg
         })
     }

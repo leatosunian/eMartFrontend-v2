@@ -47,16 +47,6 @@
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label class="form-label">
-                                            Envío a sucursal de correo
-                                        </label>
-
-                                        <input type="number" class="form-control" placeholder="Ingresa un precio" v-model="settings.toShipperBranch">
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">
                                             Retiro por mi sucursal
                                         </label>
 
@@ -76,6 +66,8 @@
                                         <input type="text" class="form-control" placeholder="Ingresa la empresa" v-model="settings.shippingCompany" >
                                     </div>
                                 </div>
+                                <div class="col-12 col-md-6"></div>
+
                             
                                 <div class="mt-4 col-12 col-md-6">
                                     <label class="form-label" style="font-weight:600; font-size:17px" >
@@ -164,7 +156,6 @@ export default {
                 } 
             }).catch( error => {
                 console.log(error)
-                console.log(error.response.data.msg)
             })
         },
         saveConfig(){
@@ -184,7 +175,7 @@ export default {
                 });
                 this.getConfig()
             }).catch( error => {
-                console.log(error.response.data.msg)
+                console.log(error)
                 this.msm_error = error.response.data.msg
                 this.$notify({
                     group: 'foo',

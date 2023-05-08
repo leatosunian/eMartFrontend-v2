@@ -131,10 +131,8 @@ export default {
             }
             }).then((response) => {
                 this.USDLogs = response.data
-                console.log(this.USDLogs);
             }).catch( error => {
                 console.log(error)
-                console.log(error.response.data.msg)
             })
         },
 

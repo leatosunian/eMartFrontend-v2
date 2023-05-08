@@ -134,7 +134,6 @@ export default {
                 }
             }).then((result)=>{
                 this.clients = result.data;
-                console.log(this.clients);
             });
         },
         searchClient() {

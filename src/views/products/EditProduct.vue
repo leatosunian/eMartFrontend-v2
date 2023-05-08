@@ -430,7 +430,7 @@
                 this.product = data
                 this.str_image = this.$url+'/getImage/'+this.product.image
             }).catch( error => {
-                console.log(error.response.data.msg)
+                console.log(error)
                 this.msm_error = error.response.data.msg
             })
         },
@@ -464,7 +464,6 @@
                   });
                   this.image = undefined
             }
-            console.log(image)
         },
         validate(){
           if(!this.product.name || !this.product.price || !this.product.image || !this.product.category || !this.product.str_variant || !this.product.subcategory){
@@ -568,7 +567,7 @@
                   type: 'success'
                 });
               }).catch( error => {
-                console.log(error.response.data.msg)
+                console.log(error)
                 this.msm_error = error.response.data.msg
                 return this.$notify({
                   group: 'foo',
@@ -644,7 +643,7 @@
                 this.subcategories = this.categories.filter(cat => cat.category.name == this.product.category)[0].subcategories
                 
             }).catch( error => {
-                console.log(error.response.data.msg)
+                console.log(error)
             })
         },
         getSubcategories(event){

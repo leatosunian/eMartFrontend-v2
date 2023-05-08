@@ -329,7 +329,6 @@
             }
             }).then((response) => {
               const {data} = response
-              console.log(data);
               this.$notify({
                 group: 'foo',
                 title: '',
@@ -364,7 +363,7 @@
                 this.categories = data
                 this.isLoading = false
             }).catch( error => {
-                console.log(error.response.data.msg)
+                console.log(error)
             })
         },
         getSubcategories(event){

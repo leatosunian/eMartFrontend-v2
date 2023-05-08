@@ -322,8 +322,7 @@ export default {
             (this.currentPage-1)* this.perPage, this.currentPage*this.perPage
             )
         },
-        isLoading: true,
-
+        isLoading: true
     }
   },
   
@@ -350,7 +349,6 @@ export default {
     allproducts(){
         this.loading = true
         const token = localStorage.getItem('token')
-        
         axios.get(this.$url+'/products/'+this.filter, {
         headers: {
           "Content-Type": 'application/json',

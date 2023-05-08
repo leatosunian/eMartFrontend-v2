@@ -37,7 +37,7 @@
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label class="form-label">
-                                            Precio del dólar
+                                            Cotización del dólar
                                         </label>
 
                                         <input type="number" class="form-control" placeholder="Ingresa un precio" v-model="USDData.value" >
@@ -47,12 +47,12 @@
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label class="form-label">
-                                            Mostrar precio en
+                                            Mostrar precio
                                         </label>
 
                                         <select name="" class="form-select" v-model="USDData.enabled" >
-                                            <option value=true >Pesos</option>
-                                            <option value=false >Dólares</option>
+                                            <option value=true >Original del producto</option>
+                                            <option value=false >Sujeto al dólar</option>
                                         </select>
                                     </div>
                                 </div>
@@ -61,7 +61,7 @@
                                     <div class="form-group" style="display:flex;align-items:center; height:fit-content">
                                         <img src="@/assets/clock-rotate-left-solid.svg" style="width:11px;">
                                         <router-link to="/usdlogs" class="" style="cursor:pointer; color:black; font-size:15px; margin-left:5px;">
-                                            Historial de valores del dólar
+                                            Historial de cotizaciones del dólar
                                         </router-link>
                                     </div>
                                 </div>
@@ -137,10 +137,8 @@ export default {
             }
             }).then((response) => {
                 this.USDData = response.data[0]
-                console.log(this.USDData);
             }).catch( error => {
                 console.log(error)
-                console.log(error.response.data.msg)
             })
         },
         saveUSDSetting(){
@@ -161,7 +159,7 @@ export default {
                 });
                 this.getUSDSettings()
             }).catch( error => {
-                console.log(error.response.data.msg)
+                console.log(error)
                 this.msm_error = error.response.data.msg
                 this.$notify({
                     group: 'foo',
